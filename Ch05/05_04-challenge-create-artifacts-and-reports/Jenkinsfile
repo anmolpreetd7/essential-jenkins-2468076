@@ -1,7 +1,9 @@
 pipeline {
     agent any
     // Add a tool configuration here...
-    tool name: 'Maven', type: 'maven'
+    tools {
+    maven 'Maven'
+    }
     stages {
         stage('Source') {
             steps {
